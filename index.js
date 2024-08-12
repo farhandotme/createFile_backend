@@ -16,8 +16,8 @@ app.get("/", (req, res) => {
   });
 });
 
-
 // create file
+
 app.post("/create", (req, res) => {
   fs.writeFile(`./files/${req.body.title.split(' ').join('')}.txt`,`${req.body.details}`,(err) => {
       res.redirect("/");
